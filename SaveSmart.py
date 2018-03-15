@@ -199,7 +199,7 @@ def get_salesreps():
         return json_response(data={'Success': False, 'Message': e.message}, status_code=400)
 
 @app.route('/product/status/<string:productid>/<string:status>', methods=['PUT'])
-def update_sensor_status(productid,status):
+def update_product_status(productid,status):
     """
     This API is used to Update the product status using product id in products
     ---
@@ -225,7 +225,7 @@ def update_sensor_status(productid,status):
         return json_response(data={'Success': False, 'Message': e.message}, status_code=400)
 
 @app.route('/products/list',methods=['GET'])
-def get_available_sensorpool():
+def get_available_productpool():
     """
     This API is used to get all the filter on category/type of products from products
     ---
@@ -244,7 +244,7 @@ def get_available_sensorpool():
 
 
 @app.route('/product/<string:productID>',methods=['GET'])
-def get_sensor_information(productID):
+def get_product_information(productID):
     """
     This API is used to get the product information using product id from Products
     ---
